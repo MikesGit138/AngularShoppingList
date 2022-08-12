@@ -35,7 +35,7 @@ export class ShoppingListServiceService {
     return this.http.put<APIResponse<Items>>(this.API_URL + '/' + id, data).pipe(catchError(this._handleHttpErrors(new Items())));
   }
 
-  deleteItem(id:string): Observable<APIResponse<Items>>{
+  deleteItem(id:any): Observable<APIResponse<Items>>{
     return this.http.delete<APIResponse<Items>>(this.API_URL + '/' + id).pipe(catchError(this._handleHttpErrors(new Items())));
   }
 }

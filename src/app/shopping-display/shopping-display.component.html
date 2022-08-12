@@ -33,7 +33,7 @@
         <td>{{item.quantity}}</td>
         <td>{{item.price}}</td>
         <td class="actions">
-          <button class="del-btn">Remove</button>
+          <button class="del-btn" (click)="deleteItem(item._id)">Remove</button>
           <button class="edit-btn">Update</button>
         </td>
       </tr>

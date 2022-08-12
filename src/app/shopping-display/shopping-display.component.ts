@@ -18,4 +18,12 @@ export class ShoppingDisplayComponent implements OnInit {
   getlist() {
     this.shoppingListService.getAllItems().subscribe((results: { data: Items[]; })=>{this.items = results.data})
   }
+
+  deleteItem(itemId: any){
+    if(confirm("Are you sure you want to delete this item?")){
+      this.shoppingListService.deleteItem(itemId).subscribe(()=>{
+        this.getlist();
+      })
+    }
+  }
 }
