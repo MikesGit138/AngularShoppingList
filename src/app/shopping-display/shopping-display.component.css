@@ -1,10 +1,4 @@
 
-.body {
-  background: linear-gradient(#0284774f, #fff, #0284774f);
-  background-repeat: no-repeat;
-  height: 100%;
-}
-
 .main-container {
   /* width: 25%; */
   margin: 0 auto;
@@ -13,50 +7,67 @@
 
 }
 
-.main-header {
-  background: #028476;
-  color: #fff;
-  position: relative;
-  padding: 5px 0;
-
-}
-
-.main-header h1 {
-  font-size: 20px;
-  text-align: center;
-}
-
-.add-btn {
-  background: crimson;
-  position: absolute;
-  border-radius: 50%;
-  padding: 0 7px;
-  color: #fff;
-  font-size: 25px;
-  border: none;
-  box-shadow: 0 0 0.4rem #fff;
-  top: 7px;
-  right: 7px;
-}
 
 .del-btn {
-  background: #000;
+  background: crimson;
   color: #fff;
   border-radius:10px;
   padding: 5px;
-  width: 50px;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.edit-btn{
+  background-color: green;
+color: white;
+border-radius: 10px;
+border: none;
+padding: 5px;
+cursor: pointer;
 }
 
 .list-item {
-  padding: 0 2rem 2rem 2rem;
-
+  display: grid;
+  grid-template-columns: auto auto auto;
+justify-content: space-around;
 
 }
-
-.grid {
-display: grid;
-grid-template-columns: auto auto auto;
-/* grid-template-columns: 25% 25% 25% 25%; */
+.card{
+  border: 8px solid rgb(0, 162, 255);
+  border-radius: 8px;
+  padding: 20px;
 }
+
+
+.flex-ctn{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+#table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#table td, #table th {
+  border: 1px solid white;
+  padding: 8px;
+}
+
+#table tr:nth-child(even){background-color: #f2f2f2;}
+
+#table tr:hover {background-color: #ddd;}
+
+#table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(0, 162, 255);
+  color: white;
+}
+
 
 

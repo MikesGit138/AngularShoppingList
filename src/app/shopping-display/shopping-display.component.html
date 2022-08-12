@@ -1,38 +1,44 @@
-<body class="body">
 
-  <!-- <div>
-    <button type="submit" class="add-btn">+</button>
-  </div> -->
-  <div class="main-container" *ngFor="let item of items" class="list-item">
+  <!-- <div class="main-container"  class="list-item">
 
-    <div class="main-header">
-      <h1>Category: {{item.category}}</h1>
-    </div>
-
-    <div class="grid">
-      <ol>
-        <li>
+    <div class="card-ctn" *ngFor="let item of items">
+      <div class="card">
           <p>Item Name: {{item.item_name}}</p>
+        <p>Category: {{item.category}}</p>
           <p>Quantity: {{item.quantity}}</p>
           <p>Price: {{item.price}}</p>
+    
           <div>
-            <button class="del-btn">X</button>
+            <button class="del-btn">Remove</button>
+            <button class="edit-btn">Update</button>
           </div>
-        </li>
-      </ol>
-    </div>
+          </div>
+          </div>
+    
 
+  </div> -->
+<div class="flex-ctn">
+  <table id="table">
+    <thead>
+    <th>Name</th>
+    <th>Category</th>
+    <th>Quantity</th>
+    <th>Price</th>
+    <th>Action</th>
+    </thead>
+    <tbody *ngFor="let item of items">
+      <tr>
+        <td>{{item.item_name}}</td>
+        <td>{{item.category}}</td>
+        <td>{{item.quantity}}</td>
+        <td>{{item.price}}</td>
+        <td>
+          <button class="del-btn">Remove</button>
+          <button class="edit-btn">Update</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
   </div>
 
 
-  <!-- Colletions
-      - Item
-         - Category
-         - Price
-         - Amount
-
-      - Category
-         - Name -->
-
-
-</body>
