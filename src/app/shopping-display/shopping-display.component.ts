@@ -9,7 +9,7 @@ import { ShoppingListServiceService } from '../shopping-list-service.service';
 })
 export class ShoppingDisplayComponent implements OnInit {
   items: Items[] = []
-
+  
   constructor(private shoppingListService:ShoppingListServiceService,) { }
 
   ngOnInit(): void {

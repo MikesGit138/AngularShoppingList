@@ -53,3 +53,14 @@ exports.deleteItemsById = async (req, res) => {
 		JSONResponse.error(res, 'Failure handling item model.', error, 500)
 	}
 }
+
+exports.updateItem = async (req, res) => {
+	try {
+		const item = await Items.findByIdAndUpdate(req.params.id, {$set: req.body})
+	
+		JSONResponse.success(res, 'Success.', item, 200)
+	}
+	catch(err) {
+		JSONResponse.error(res, 'Failure handling item model.', err, 500)
+	}
+}

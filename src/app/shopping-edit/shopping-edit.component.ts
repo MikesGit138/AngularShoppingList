@@ -36,7 +36,7 @@ export class ShoppingEditComponent implements OnInit {
   }
 
   onSubmit() {  
-    // console.log(this.editItem.value);
+    console.log(this.editItem.value);
     this.shoppingListServiceService.createItem(this.editItem.value).subscribe();
     alert("Successful");
     this.router.navigate(['/Display']);
