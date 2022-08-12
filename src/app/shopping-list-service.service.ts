@@ -31,7 +31,7 @@ export class ShoppingListServiceService {
     return this.http.post<APIResponse<Items>>(this.API_URL, data).pipe(catchError(this._handleHttpErrors(new Items())));
   }
 
-  updateItem(id:string, data:Items): Observable<APIResponse<Items>>{
+  updateItem(id:any, data:Items): Observable<APIResponse<Items>>{
     return this.http.put<APIResponse<Items>>(this.API_URL + '/' + id, data).pipe(catchError(this._handleHttpErrors(new Items())));
   }
 

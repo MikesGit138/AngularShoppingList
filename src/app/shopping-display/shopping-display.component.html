@@ -34,7 +34,7 @@
         <td>{{item.price}}</td>
         <td class="actions">
           <button class="del-btn" (click)="deleteItem(item._id)">Remove</button>
-          <button class="edit-btn">Update</button>
+          <button class="edit-btn" routerLink="/Update/{{item._id}}">Update</button>
         </td>
       </tr>
     </tbody>
